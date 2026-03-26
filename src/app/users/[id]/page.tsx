@@ -5,6 +5,7 @@ const UserPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const res = await fetch(`https://api.escuelajs.co/api/v1/users/${id}`);
   const user = await res.json();
+  
 
   return (
     <>
