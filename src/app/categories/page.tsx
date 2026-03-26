@@ -4,6 +4,15 @@ export default async function Products() {
   const res = await fetch("https://api.escuelajs.co/api/v1/categories");
   const categories: Category[] = await res.json();
   console.log("Hi");
+  //   const categoriesList = (
+  //   <ul>
+  //     {categories.map((c) => (
+  //       <li key={c.id}>{c.name}</li>
+  //     ))}
+  //   </ul>
+  // );
+
+
 
   return (
     <div className="flex flex-wrap gap-3 min-h-60  p-2 m-3 justify-center ">
