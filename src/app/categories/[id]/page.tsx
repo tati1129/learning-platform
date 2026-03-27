@@ -1,16 +1,5 @@
 import Image from "next/image"
 
-// import { FC } from "react";
-
-// interface Props{
-//     params: Promise<{id: string}>;
-// }
-
-// const ProductPage: FC<Props> = async({params})=>{
-//     const {id} = await params;
-// }
-
-// export default ProductPage;
 
 const CategoryPage = async ({
   params,
