@@ -1,16 +1,25 @@
-
-
-import { pgTable,integer ,varchar} from "drizzle-orm/pg-core";
+import { pgTable, integer, varchar } from "drizzle-orm/pg-core";
 import { title } from "process";
 
-export const coursesTable = pgTable("courses",{
-    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+export const coursesTable = pgTable("courses", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  title: varchar({ length: 255 }).notNull(),
+  description: varchar({ length: 255 }).notNull(),
+});
+export const coursesTeachers = pgTable("teachers", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name: varchar({ length: 255 }).notNull(),
+  position: varchar({ length: 255 }).notNull(),
+  experience: integer().notNull()
+});
+export const groupsTable = pgTable("groups",{
+    id:integer().primaryKey().generatedAlwaysAsIdentity(),
     title: varchar({length:255}).notNull(),
-     description: varchar({ length: 255 }).notNull(),
+});
 
-})
 
 // мы можем сгенерировать файлы с миграциями
 // npx drizzle-kit generate
 // эта команда должна создать SQL файлы, которые мы сможем потом применить
 // она сгенерирует файлы миграций
+// npx drizzle-kit migrate

@@ -1,3 +1,4 @@
+import BackButton from "@/components/BackButton";
 import Image from "next/image"
 
 // import { FC } from "react";
@@ -23,6 +24,7 @@ const ProductPage = async ({
     const product = await res.json();
 
     return <div>
+      <BackButton label={"Back to products"}/>
         <h2>{product.title}</h2>
           <Image
         src={product.images[0]}

@@ -7,6 +7,8 @@ export default function index() {
     <nav className="flex flex-wrap bg-violet-200 gap-2 items-center justify-center min-h-24">
         <Link href="/about">About</Link>
         <Link href="/">Home</Link>
+        <Link href="/courses">Courses</Link>
+        <Link href="/groups">Groups</Link>
         <Link href="/profile">Profile</Link>
         <Link href="/products">Products</Link>
         <Link href="/categories">Categories</Link>
